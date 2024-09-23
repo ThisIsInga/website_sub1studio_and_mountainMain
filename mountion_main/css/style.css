@@ -1,0 +1,738 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face{
+    font-family: 'CabinetGrotesk-Extrabold';
+    src: url('../fonts/CabinetGrotesk-Extrabold.otf');
+}
+
+@font-face{
+    font-family: 'CabinetGrotesk-Black.otf';
+    src: url('../fonts/CabinetGrotesk-Black.otf');
+}
+
+@font-face{
+    font-family: 'CabinetGrotesk-ExtraLight';
+    src: url('../fonts/CabinetGrotesk-ExtraLight.otf');
+}
+
+@font-face{
+    font-family: 'Poppins-Medium';
+    src: url('../fonts/Poppins-Medium.ttf');
+}
+
+@font-face{
+    font-family: 'Poppins-Regular';
+    src: url('../fonts/Poppins-Regular.ttf');
+}
+
+body{
+    background-color: #020e20;
+}
+
+.white-line_w{
+    height: 2px;
+    background-color: white;
+    margin-top: 40px;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-blocks{
+    display: flex;
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 столбца */
+    grid-template-rows: repeat(3, 1fr);    /* 3 строки */
+    gap: 50px;                             /* промежуток между элементами */
+}
+
+
+
+/* MAIN-MENU */
+
+
+.main {
+    background-image: url('../images/background-main.png'); 
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: 40px;
+    position: relative;
+    z-index: 100;
+}
+
+.menu-icon {
+    font-family: 'CabinetGrotesk-Extrabold';
+    font-size: 24px;
+    position: relative;
+}
+
+.menu-icon p::before{
+    content: url('../images/icons/BeauMontian.svg');
+    position: absolute;
+    left: -29px;
+    bottom: -3px;
+
+}
+
+.menu-sections ul{
+    font-family: 'Poppins-Regular';
+    display: flex;
+    list-style-type: none;
+   
+}
+
+.menu-sections li{
+    margin-left: 48px;
+    
+}
+
+.scroll-container {
+    position: relative; /* Для абсолютного позиционирования элемента с текстом */
+    height: 100vh; /* Высота контейнера */
+    z-index: 10;
+}
+
+.vertical-line {
+    border-left: 2px solid white; /* Вертикальная линия */
+    height: 717px; /* Длина линии */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 97px; /* Центруем по горизонтали */
+}
+
+.scroll-text {
+    font-family: 'CabinetGrotesk-ExtraLight';
+    position: absolute; /* Абсолютное позиционирование */
+    top: 740px;
+    left: 3px; /* Центруем по горизонтали */
+    font-size: 24px;
+    font-family: Arial, sans-serif; /* Шрифт текста */
+
+    transform: rotate(-90deg);
+}
+.scroll-text::before{
+    content: url('../images/icons/mouse_scrollDown.svg'); /* Иконка перед текстом */
+    display: block; /* Чтобы изображение обрабатывалось как блок */
+    margin-bottom: 5px; /* Отступ между иконкой и текстом */
+    transform-origin: top left; /* Точка поворота */
+    transform: rotate(90deg) translateX(-50%); /* Поворот и смещение по оси X */
+    padding-left: 125px;
+    padding-top: 12px;
+}
+
+
+
+
+.header-main{
+    position: relative;
+}
+
+.header {
+    display: inline-block;
+    position: absolute;
+    top: -0px;
+    z-index: 4;
+    width: 100%; /* Ширина на 100% */
+}
+
+.header img{
+    z-index: 4;
+    position: absolute;
+    padding-top: 40px;
+    width: 100%; /* Растянуть картинку на всю ширину родителя */
+}
+.header-text {
+    font-family: 'CabinetGrotesk-ExtraBold';
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    padding-top: 200px;
+    padding-left: 750px;
+    font-size: 56px;
+    color: rgba(255, 255, 255, 0.8); /* Белый цвет с 80% прозрачностью */
+}
+.header-text span{
+    font-family: 'CabinetGrotesk-Black.otf';
+    font-size: 156px;
+    position: absolute;
+    left: 350px;
+    color: rgba(255, 255, 255, 0.9); /* Белый цвет с 80% прозрачностью */
+}
+
+.main-info {
+    position: relative;
+}
+
+.main-view {
+    margin-left: 20px;
+    width: 1000px;
+    position: absolute;
+    margin-top: -330px;
+    margin-left: 167px;
+}
+
+.main-view_img {
+    z-index: 5;
+    margin-left: 20px;
+    position: absolute;
+}
+.main-view_text h2{
+    font-family: 'CabinetGrotesk-Extrabold';
+    z-index: 5;
+    position: absolute;
+    margin-left: 360px;
+    margin-top: 60px;
+    font-size: 56px;
+    line-height: 64px;
+}
+
+.main-view_text span{
+    font-family: 'CabinetGrotesk-ExtraLight';
+    z-index: 5;
+    position: absolute;
+    margin-left: 360px;
+    margin-top: 150px;
+    font-size: 32px;
+    line-height: 38.73px;
+    color: #16F1FF;
+}
+
+.main-view_text p{
+    font-family: 'CabinetGrotesk-ExtraLight';
+    z-index: 5;
+    position: absolute;
+    margin-left: 360px;
+    margin-top: 220px;
+    font-size: 18px;
+    line-height: 32px;
+    color: white;
+}
+
+.main-blog{
+    position: absolute;
+    right: 0;
+    margin-top: -253px;
+    z-index: 5;
+}
+
+.main-weather {
+    z-index: 5;
+    margin-left: 190px;
+    margin-top: 264px;
+    position: absolute;
+}
+.main-weather h2{
+    font-family: 'CabinetGrotesk-ExtraBold';
+    font-size: 72px;
+    line-height: 84px;
+}
+
+.main-weather span{
+    font-family: 'CabinetGrotesk-ExtraLight';
+    font-size: 32px;
+    line-height: 38.73px;
+    color: rgba(255, 255, 255, 0.664);
+}
+
+.main-weather p{
+    font-family: 'CabinetGrotesk-ExtraBold';
+    font-size: 40px;
+    line-height: 56px;
+    margin-left: 80px;
+}
+
+.main-weather p::before{
+    content: url('../images/icons/Weather.svg');
+    position: absolute;
+    margin-left: -60px;
+}
+
+.main-weather_condition{
+    display: flex;
+}
+
+.main-hours{
+    position: absolute;
+    z-index: 5;
+    right: 0;
+    margin: 180px 164px 0px 0px;
+}
+
+
+
+
+/* FORECAST SECTION */
+
+
+.forecast {
+    font-family: 'CabinetGrotesk-Extrabold';
+    z-index: 7;
+    padding-top: 1000px;
+    color: white;
+    background-color: #020e20;
+}
+.forecast-text {
+    padding-top: 100px;
+}
+.forecast-text_days {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.forecast-text_days p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    border-radius: 50px;
+    width: 170px;
+    height: 88px;
+    font-size: 30px;
+    line-height: 56px;
+    background-color: #2aef84;
+}
+
+.forecast-text_days h2{
+    font-size: 40px;
+    line-height: 56px;
+    padding-top: 20px;
+}
+
+.forecast-text_week span{
+    font-size: 56px;
+}
+
+.forecast-text_week p{
+    font-family: 'CabinetGrotesk-ExtraLight';
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.61);
+}
+
+.forecast-text_day {
+    font-family: 'CabinetGrotesk-ExtraLight';
+    color: rgba(255, 255, 255, 0.493);
+    margin-top: -64px;
+}
+
+.forecast-text_week71::before {
+    content: url('../images/icons/fluent_weather-drizzle-48-filled.svg');
+}
+
+.forecast-text_week68::before {
+    content: url('../images/icons/fluent_weather-hail-day-20-filled@2x.svg');
+}
+
+.forecast-text_week56::before {
+    content: url('../images/icons/fluent_weather-thunderstorm-24-filled.svg');
+}
+
+
+/* FACILITIES SECTION */
+
+
+.facilities-text {
+    padding-top: 200px;
+    color: white;
+    background-color: #020e20;
+}
+
+.facilities-text_header span{
+    font-family: 'CabinetGrotesk-ExtraBold';
+    font-size: 32px;
+    line-height: 38.73px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.facilities-text_header h2{
+    font-family: 'CabinetGrotesk-ExtraBold';
+    font-size: 72px;
+    line-height: 84px;
+}
+
+.facilities-navigation {
+    position: relative;
+    padding-top: 55.5px;
+}
+
+.Pagination {
+    padding-right: 80px;
+}
+
+.ArrowLeft {
+    padding-top: 20px;
+    position: absolute;
+    top: 20px;
+    right: -60px;
+    padding-left: 80px;
+}
+
+.ArrowRight {
+    padding-top: 20px;
+    position: absolute;
+    top: 20px;
+    right: -150px;
+}
+
+.facilities-blocks {
+    padding-top: 109px;
+    height: 840px;
+    font-family: 'CabinetGrotesk-ExtraBold';
+    color: white;
+    background-color: #020e20;
+}
+
+.facilities-blocks_blue {
+    margin-top: 70px;
+    width: 530.67px;
+    height: 520px;
+    border-radius: 12px;
+    background-color: #152742;
+}
+
+.facilities-blocks_blue-number {
+    font-size: 120px;
+    margin: 48px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.facilities-blocks_blue-header {
+    font-size: 52px;
+    line-height: 84px;
+    padding-top: 115px;
+    padding-left: 48px;
+}
+
+.facilities-blocks_blue-details {
+    padding-top: 16px;
+    padding-left: 55px;
+    font-size: 24px;
+    position: relative;
+}
+
+.facilities-blocks_blue-details::after {
+    content: url('../images/icons/Arrow_for_blocks.svg');
+    position: absolute;
+    top: 15px;
+    left: 200px;
+}
+
+.facilities-blocks_green {
+    width: 530px;
+    height: 640px;
+    border-radius: 12px;
+    background-color: #06516E;
+    box-shadow: 0px 20px 50px 10px #06516E54;
+}
+
+.facilities-blocks_green-number span{
+    margin: 48px 0px 0px 48px;
+    font-size: 120px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.facilities-blocks_green-number img{
+    margin-left: 57px;
+    border-radius: 5px;
+    font-size: 120px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.facilities-blocks_green-header {
+    font-size: 52px;
+    line-height: 84px;
+    padding-top: 80px;
+    padding-left: 48px;
+}
+
+.facilities-blocks_green-details {
+    padding-top: 16px;
+    padding-left: 55px;
+    font-size: 24px;
+    position: relative;
+}
+
+.facilities-blocks_green-details::after {
+    content: url('../images/icons/Arrow_for_blocks.svg');
+    position: absolute;
+    top: 15px;
+    left: 200px;
+}
+
+
+/* SECTION MOUNTAIN */
+
+
+.mountain{
+    margin-top: 200px;
+    background-image: url('../images/background_mountain.png');
+    height: 854px;
+    color: white;
+}
+
+.mountain-info {
+    position: relative;
+}
+
+
+.mountain-info_route{
+    font-family: 'Poppins-Medium';
+    max-width: 250px;
+    max-height: 98px;
+    margin-top: 350px;
+    padding: 16px;
+    font-size: 20px;
+    line-height: 28px;
+    border-radius: 16px;
+    padding: 16px;
+    border: 2px rgba(255, 255, 255, 0.38) solid;
+    backdrop-filter: blur(10px);
+}
+
+.mountain-info_route::before{
+    content: url('../images/icons/Map.svg');
+    margin-right: 16px;
+    margin-top: 10px;
+}
+
+.mountain-info_route::after{
+    content: url('../images/icons/arrow-right-Beuau.svg');
+    margin-left: 16px;
+}
+
+.mountain-info_calendar {
+    font-family: 'Poppins-Medium';
+    max-width: 313px;
+    max-height: 346px;
+    margin-top: 220px;
+    margin-right: 100px;
+    font-size: 20px;
+    border-radius: 16px;
+    padding: 24px 24px 0px 24px;
+    border: 2px rgba(255, 255, 255, 0.38) solid;
+    backdrop-filter: blur(10px);
+}
+
+.mountain-info_calendar-day {
+    opacity: 80%;
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 16px;
+}
+
+.mountain-info_calendar-line {
+    width: 256px;
+    height: 2px;
+    border-radius: 1px;
+    opacity: 20%;
+    background-color: white;
+}
+
+.mountain-info_calendar-time {
+    width: 265px;
+    height: 40px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    position: relative;
+    background-color: #11327B;
+}
+
+.mountain-info_calendar-time span::before{
+    content: url('../images/icons/Ic_weather.svg');
+    position: absolute;
+    top: 5px;
+    right: 75px;
+}
+
+.mountain-info_calendar-title {
+    font-size: 20px;
+    line-height: 28px;
+    padding-top: 16px;
+    padding-bottom: 8px;
+}
+
+.mountain-info_calendar-title_info {
+    font-size: 32px;
+    line-height: 38.73px;
+    padding-bottom: 16px;
+}
+
+.mountain-info_text {
+    max-width: 536px;
+    height: 486px;
+    margin-top: 170px;
+}
+
+.mountain-info_text span{
+    font-family: 'CabinetGrotesk-ExtraLight';
+    font-size: 32px;
+    line-height: 48px;
+    color: rgba(255, 255, 255, 0.60);
+}
+
+.mountain-info_text h2{
+    font-family: 'CabinetGrotesk-ExtraBold';
+    font-size: 72px;
+    line-height: 84px;
+}
+
+.mountain-info_text p{
+    font-family: 'CabinetGrotesk-ExtraLight';
+    font-size: 18px;
+    line-height: 32px;
+    opacity: 80%;
+}
+
+.mountain-info_text-more{
+    font-family: 'CabinetGrotesk-ExtraBold';
+    margin-top: 47px;
+    font-size: 24px;
+    line-height: 29.76px;
+    position: relative;
+    color: #16F1FF;
+}
+
+.mountain-info_text-more::after{
+    content: url('../images/icons/Arrow_for_blocks.svg');
+    position: absolute;
+    left: 100px;
+}
+
+/* SECTION TICKET */
+
+.ticket {
+    font-family: 'CabinetGrotesk-ExtraBold';
+    max-width: 100%;
+    max-height: 723px;
+    position: relative;
+    color: white;
+}
+
+.ticket-text{
+    position: absolute;
+    top: 200px;
+    left: 300px;
+}
+
+.ticket-text span{
+    font-size: 32px;
+    line-height: 38.73px;
+    color: rgba(255, 255, 255, 0.60);
+}
+
+.ticket-text h2{
+    font-size: 72px;
+    line-break: 84px;
+}
+
+.ticket-text p{
+    font-family: 'CabinetGrotesk-ExtraLight';
+    font-size: 18px;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.ticket-text_buying {
+    font-family: 'CabinetGrotesk-ExtraBold';
+    margin-top: 56px;
+    margin-right: 50px;
+    padding: 8px 16px 8px 8px;
+    font-size: 24px;
+    line-height: 29.76px;
+    position: relative;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.40);
+}
+
+.ticket-text_buying::before{
+    content: url('../images/icons/Icon_buying.svg');
+    position: absolute;
+    top: 7px;
+    left: 30px;
+}
+
+
+/* FOOTER */
+
+
+
+.footer {
+    font-family: 'Poppins-Regular';
+    margin-top: 208px;
+    color: white;
+}
+
+.footer-social {
+}
+
+.footer-social h2{
+    font-size: 24px;
+    line-height: 29.76px;
+}
+
+.footer-social h2::before{
+    content: url('../images/icons/Mountain.svg');
+    margin-right: 10px;
+}
+
+.footer-social p{
+    font-family: 'CabinetGrotesk-ExtraLight';
+    padding: 24px 0px;
+    font-size: 18px;
+    line-height: 32px;
+}
+
+.footer-social_icon .social-icon {
+    margin-left: 24px;
+}
+
+.footer-navigation li{
+    margin-right: 254px;
+    list-style-type: none;
+    font-size: 18px;
+    line-height: 32px;
+    color: #A4AAC1;
+}
+
+
+/* SECTION MORE INFO */
+
+.info {
+    max-width: 1592px;
+    height: 80px;
+    margin-top: 56px;
+    margin-left: 100px;
+    border-top: 1px #56597B solid;
+    color: #A4AAC1;
+}
+
+.info-copy p{
+    font-size: 18px;
+    line-height: 32px;
+    margin-right: 1000px;
+    margin-top: 10px;
+}
+.info-more p{
+    margin-left: 26px;
+}

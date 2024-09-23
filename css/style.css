@@ -1,0 +1,425 @@
+@font-face {
+    font-family: 'Poppins-Bold'; 
+    src: url('../fonts/Poppins-Bold.ttf') 
+} 
+@font-face {
+    font-family: 'Poppins-Regular'; 
+    src: url('../fonts/Poppins-Regular.ttf') 
+}
+@font-face{
+    font-family: 'Poppins-SemiBold';
+    src: url('../fonts/Poppins-SemiBold.ttf');
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Poppins-Bold';
+    overflow-x: hidden;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourBlue{
+    font-size: 104px;
+    line-height: 132px;
+    letter-spacing: 2%;
+    color: #74EEFF;
+}
+
+.followUs{
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 24px;
+    line-height: 56px;
+}
+
+.bigLink{
+    font-family: 'Poppins-SemiBold';
+    font-size: 71.24px;
+    line-height: 86.5px;
+}
+
+
+/* SECTION WITH MAIN */
+
+
+.main {
+    background-color: rgb(31, 31, 63);
+    height: 100vh;
+}
+
+.flex-1Side {
+    margin-right: 300px;
+}
+
+.main-text_free {
+    width: 219px;
+    height: 101px;
+    margin-top: 115px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25%;
+    font-size: 58px;
+    background-color: #82E1FF;
+}
+
+.main-text_heading {
+    margin-top: 164px;
+    font-size: 92px;
+    line-height: 100px;
+    color: rgb(255, 255, 255);
+}
+
+.main-text_page {
+    font-size: 56px;
+    line-height: 84px;
+    color: #C6D1DE;
+}
+
+.main-text_Figma {
+    font-size: 40px;
+    line-height: 40px;
+    margin-top: 209px;
+    color: #C6D1DE;
+}
+
+.main-text_Figma::before{
+    content: url('../img/icons/image\ 99.svg');
+    margin-right: 29px;
+}
+
+.main-image {
+    position: relative;
+}
+
+.main-image-one {
+    z-index: 4;
+    position: absolute;
+    right: 0;
+    top: 140px;
+    height: 779px;
+    box-shadow: 0px 0px 100px 20px rgba(75, 74, 112, 0.521);
+}
+
+.main-image-two {
+    z-index: 2;
+    position: absolute;
+    right: -300px;
+    height: 919px
+}
+
+
+
+/* SECTION WITH WELCOME */
+
+
+.welcome {
+    margin-top: 151px;
+    color: #141E3D;
+}
+
+.welcome-menu_by {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.welcome-info{
+    margin-top: 122px;
+}
+
+.welcome-text_greeting {
+    font-size: 124px;
+    line-height: 186px;
+}
+
+.welcome-text_heading {
+    font-size: 124px;
+    line-height: 186px;
+    color: rgb(107, 181, 224);
+}
+
+.welcome-text_welcome {
+    font-size: 56px;
+    line-height: 84px;
+}
+
+.welcome-text_welcome span{
+    color: rgb(107, 181, 224);
+}
+
+.welcome-image {
+    margin-left: 40px;
+}
+
+.welcome-footer {
+    margin-top: 207px;
+    color: #51586D;
+}
+
+.welcome-footer_link {
+    font-size: 24px;
+    line-height: 56px;
+}
+
+.welcome-footer_link a{
+    text-decoration: none;
+    color: #353a47;
+}
+
+.welcome-footer_date {
+    font-size: 24px;
+    line-height: 40px;
+}
+
+
+
+/* SECTION WITH LECENSE */
+
+
+.license {
+    margin-top: 150px;
+}
+
+.licence-image {
+    position: relative; 
+    display: inline-block; 
+}
+
+.licence-image img {
+    display: block; 
+}
+
+.licence-image p {
+    position: absolute; 
+    bottom: 10px; 
+    left: 109px; 
+    padding: 5px;
+    font-size: 80px;
+    color: white; 
+}
+
+.allowed{
+    color: #2D344A;
+}
+
+.allowed h2{
+    margin-top: 150px;
+    font-size: 40px;
+    list-style: 48px;
+}
+
+.allowed p{
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+.allowed span{
+    color: #7E8496;
+    margin-left: 20px;
+}
+
+.restrictions {
+    margin-top: 100px;
+}
+
+.restrictions h2{
+    font-size: 40px;
+    line-height: 48px;
+    color: #F10D36;
+}
+
+.restrictions p{
+    margin-top: 40px;
+    font-size: 24px;
+    line-height: 40px;
+    color: #2D344A;
+}
+
+
+
+/* SECTION WITH SUB1 */
+
+
+.sub1{
+    background-color: #172C6B;
+}
+
+.sub1-icon {
+    margin-top: 130px;
+}
+
+.sub1-text {
+    font-size: 24px;
+    margin: 50px 0px 50px 0px;
+    color: white;
+}
+
+.sub1-info{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+}
+
+.sub1-blocks{
+    width: 406px;
+    height: 158px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #253D84;
+}
+
+.sub1-blocks a{
+    font-size: 24px;
+    position: relative;
+    color: white;
+}
+
+.sub1-UI8 a::before {
+    content: url('../img/icons/ui8.svg');
+    position: absolute;
+    left: -60px;
+    top: -5px;
+}
+
+.sub1-Gumroad a::before{
+    content: url('../img/icons/gumroad.svg');
+    position: absolute;
+    left: -60px;
+    top: -5px;
+}
+
+.sub1-Dribbble a::before{
+    content: url('../img/icons/dribbble.svg');
+    position: absolute;
+    left: -60px;
+    top: -5px;
+}
+
+.sub1-Instagram a::before{
+    content: url('../img/icons/instagram.svg');
+    position: absolute;
+    left: -60px;
+    top: 0px;
+}
+
+.sub1-Behance a::before{
+    content: url('../img/icons/behance.svg');
+    position: absolute;
+    left: -50px;
+    top: 0px;
+}
+
+.sub1-Linkedin a::before{
+    content: url('../img/icons/linkedin.svg');
+    position: absolute;
+    left: -60px;
+    top: -5px;
+}
+
+
+
+/* SECTION WITH DRIBBBLE */
+
+
+.dribbble {
+    padding-top: 323px;
+    background-color: #172C6B;
+}
+
+.dribbble-text{
+    color: white;
+    margin-bottom: 210px;
+}
+
+.dribbble-text h2{
+    font-size: 104px;
+    line-height: 132px;
+    letter-spacing: -2%;
+}
+
+.dribbble-text a{
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 48px;
+    line-height: 86.5px;
+    color: white;
+}
+
+.dribble-image_1{
+    position: relative; 
+    z-index: 1;
+    margin-left: 131px;
+    left: 30px;
+}
+
+.dribble-image_2{
+    position: absolute; 
+    z-index: 0; 
+    padding-top: 103px;
+    left: 380px;
+}
+
+
+
+/* SECTION WITH INSTAGRAM */
+
+
+.instagram {
+    padding-top: 123px;
+    padding-left: 300px;
+    background-color: #172C6B;
+}
+
+.instagram-text {
+    color: white;
+}
+
+.instagram-text a {
+    font-family: 'Poppins-Regular', sans-serif;
+    font-size: 48px;
+    line-height: 86.5px;
+    color: white;
+}
+
+.instagram-text h2 {
+    font-size: 104px;
+}
+
+.instagram-text p {
+    margin-top: 208px;
+}
+
+.instagram-image{
+    margin-right: 200px;
+}
+
+.instagram-image_1 {
+    position: relative; 
+    z-index: 1;
+}
+
+.instagram-image_2 {
+    height: 820px;
+    position: absolute;
+    right: 100px;
+    z-index: 0;
+}
